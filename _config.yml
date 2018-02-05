@@ -12,6 +12,7 @@ description:      'A simple, powerful and easy to use plugin that will help you 
 url:              http://msls.co
 baseurl:          '/'
 paginate:         5
+highlighter:      rouge
 
 author:
   name:           'Dennis Ploetner'
