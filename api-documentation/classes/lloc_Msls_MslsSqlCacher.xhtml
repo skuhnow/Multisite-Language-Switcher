@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - lloc\Msls\MslsSqlCacher</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#lloc_Msls">lloc\Msls</a>
+          </li>
+          <li class="separator">MslsSqlCacher</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/MslsSqlCacher.php.xhtml#line24">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>lloc\Msls\</small>MslsSqlCacher</h1>
+        <h4>Wrapper to avoid direct SQL without caching</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class MslsSqlCacher
+            {<br/><ul class="none"><li>// members</li><li>protected <span title=""/> <a href="#members">$db</a>;
+                    </li><li>protected  <a href="#members">$caller</a>;
+                    </li><li>protected  <a href="#members">$params</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="lloc\Msls\MslsSqlCacher" href="../classes/lloc_Msls_MslsSqlCacher/__construct.xhtml">__construct</a>()
+                    </li><li>public static MslsSqlCacher <a title="lloc\Msls\MslsSqlCacher" href="../classes/lloc_Msls_MslsSqlCacher/init.xhtml">init</a>()
+                    </li><li>public MslsSqlCacher <a title="lloc\Msls\MslsSqlCacher" href="../classes/lloc_Msls_MslsSqlCacher/set_params.xhtml">set_params</a>()
+                    </li><li>public string <a title="lloc\Msls\MslsSqlCacher" href="../classes/lloc_Msls_MslsSqlCacher/get_key.xhtml">get_key</a>()
+                    </li><li>public mixed <a title="lloc\Msls\MslsSqlCacher" href="../classes/lloc_Msls_MslsSqlCacher/__get.xhtml">__get</a>()
+                    </li><li>public mixed <a title="lloc\Msls\MslsSqlCacher" href="../classes/lloc_Msls_MslsSqlCacher/__call.xhtml">__call</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="caller"><strong>$caller</strong>
+                —
+                string<br/><span class="indent">Name of the object which created this object</span></li>
+            <li id="db"><strong>$db</strong>
+                —
+                <a title="" href="../classes/.xhtml"/><br/><span class="indent">Database object</span></li>
+            <li id="params"><strong>$params</strong>
+                —
+                mixed<br/><span class="indent">Parameters are used to create the key for the cached resultset</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct">
+              <a title="lloc\Msls\MslsSqlCacher" href="../classes/lloc_Msls_MslsSqlCacher/__construct.xhtml">__construct()</a>
+            </li>
+            <li id="__call"><a title="lloc\Msls\MslsSqlCacher" href="../classes/lloc_Msls_MslsSqlCacher/__call.xhtml">__call()</a>
+                — Call a method of the db-object with the needed args and cache the result</li>
+            <li id="__get"><a title="lloc\Msls\MslsSqlCacher" href="../classes/lloc_Msls_MslsSqlCacher/__get.xhtml">__get()</a>
+                — Magic __get</li>
+            <li id="get_key"><a title="lloc\Msls\MslsSqlCacher" href="../classes/lloc_Msls_MslsSqlCacher/get_key.xhtml">get_key()</a>
+                — Get the name of the key which is in use for the cached object</li>
+            <li id="init"><a title="lloc\Msls\MslsSqlCacher" href="../classes/lloc_Msls_MslsSqlCacher/init.xhtml">init()</a>
+                — Factory</li>
+            <li id="set_params"><a title="lloc\Msls\MslsSqlCacher" href="../classes/lloc_Msls_MslsSqlCacher/set_params.xhtml">set_params()</a>
+                — Set params</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.11.0 - Copyright (C) 2010 - 2018 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>
