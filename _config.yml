@@ -1,6 +1,6 @@
 # Dependencies
 markdown:         redcarpet
-pygments:         true
+highlighter:      rouge
 
 # Permalinks
 permalink:        pretty
@@ -8,7 +8,7 @@ permalink:        pretty
 # Setup
 title:            Multisite Language Switcher
 tagline:          'Simple, powerful and easy to use'
-description:      'A simple, powerful and easy to use plugin that will help you to manage multilingual content in a multisite WordPress installation.'
+description:      'A simple, powerful and easy to use plugin that will help you to manage multilingual content in a WordPress multisite.'
 url:              http://msls.co
 baseurl:          '/'
 paginate:         5
@@ -21,8 +21,8 @@ author:
 encoding:         UTF-8
 
 wordpress:
-  stable:         http://downloads.wordpress.org/plugin/multisite-language-switcher.1.0.1.zip
-  repo:           http://wordpress.org/plugins/multisite-language-switcher
+  stable:         https://downloads.wordpress.org/plugin/multisite-language-switcher.zip
+  repo:           https://wordpress.org/plugins/multisite-language-switcher/
 
 github:
   repo:           https://github.com/lloc/Multisite-Language-Switcher
