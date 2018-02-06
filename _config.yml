@@ -1,29 +1,28 @@
-# Dependencies
-markdown:         redcarpet
-pygments:         true
+# Global
+highlighter:         rouge
+plugins:             [jekyll-paginate, jekyll-gist]
 
 # Permalinks
-permalink:        pretty
+permalink:           pretty
 
 # Setup
-title:            Multisite Language Switcher
-tagline:          'Simple, powerful and easy to use'
-description:      'A simple, powerful and easy to use plugin that will help you to manage multilingual content in a WordPress multisite.'
-url:              http://msls.co
-baseurl:          '/'
-paginate:         5
-highlighter:      rouge
+title:               Multisite Language Switcher
+tagline:             'Simple, powerful and easy to use'
+description:         'A simple, powerful and easy to use plugin that will help you to manage multilingual content in a WordPress multisite.'
+url:                 http://msls.co
+baseurl:             '/'
+paginate:            5
 
 author:
-  name:           'Dennis Ploetner'
-  url:            https://twitter.com/realloc
+  name:              'Dennis Ploetner'
+  url:               https://twitter.com/realloc
 
 # Custom vars
-encoding:         UTF-8
+encoding:            UTF-8
 
 wordpress:
-  stable:         https://downloads.wordpress.org/plugin/multisite-language-switcher.zip
-  repo:           https://wordpress.org/plugins/multisite-language-switcher/
+  stable:            https://downloads.wordpress.org/plugin/multisite-language-switcher.zip
+  repo:              https://wordpress.org/plugins/multisite-language-switcher/
 
 github:
-  repo:           https://github.com/lloc/Multisite-Language-Switcher
+  repo:              https://github.com/lloc/Multisite-Language-Switcher

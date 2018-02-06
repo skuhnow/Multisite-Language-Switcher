@@ -17,8 +17,10 @@ You can use the constant _WPLANG_ provided by WordPress if you want to know the 
 
 The Multisite Language Switcher sets the language to 'us' in this case. If you want to use this functionality you can write something like that:
 
-	$blog     = MslsBlogCollection::instance()->get_current_blog();
-	$language = $blog->get_language();
+```php
+$blog     = MslsBlogCollection::instance()->get_current_blog();
+$language = $blog->get_language();
+```
 
 ## Manipulate the Navigation Menu ##
 
@@ -26,44 +28,50 @@ The class _MslsOutput_ comes in handy when you'd like to manipulate the items of
 
 Here comes a simplified version of the add-on [MslsMenu](https://github.com/lloc/MslsMenu):
 
-	function my_custom_menu_item( $items, $args ) {
-		if ( function_exists ( 'the_msls' ) && 'primary' == $args->theme_location ) {
-			$obj = new MslsOutput;
-			$arr = $obj->get( 2 );
-			if ( !empty( $arr ) ) {
-				$items .= '<li>' . implode( '</li><li>', $arr ) . '</li>';
-			}
-		}
-		return $items;
-	}
-	add_filter( 'wp_nav_menu_items', 'my_custom_menu_item', 10, 2 );
+```php
+function my_custom_menu_item( $items, $args ) {
+    if ( function_exists ( 'the_msls' ) && 'primary' == $args->theme_location ) {
+        $obj = new MslsOutput;
+        $arr = $obj->get( 2 );
+        if ( !empty( $arr ) ) {
+            $items .= '<li>' . implode( '</li><li>', $arr ) . '</li>';
+        }
+    }
+    return $items;
+}
+add_filter( 'wp_nav_menu_items', 'my_custom_menu_item', 10, 2 );
+```
 
 You could pass - of course - other values different from _2_. Here is a list with all possibilities:
 
-	/* MslsLink - Image + text */
-	$arr = $obj->get( 0 );
-	 
-	/* MslsLinkTextOnly - Just text	*/
-	$arr = $obj->get( 1 );
-	 
-	/* MslsLinkImageOnly - Just image */
-	$arr = $obj->get( 2 );
-	 
-	/* MslsLinkTextImage - Text + image */
-	$arr = $obj->get( 3 );
+```php
+/* MslsLink - Image + text */
+$arr = $obj->get( 0 );
+ 
+/* MslsLinkTextOnly - Just text	*/
+$arr = $obj->get( 1 );
+ 
+/* MslsLinkImageOnly - Just image */
+$arr = $obj->get( 2 );
+ 
+/* MslsLinkTextImage - Text + image */
+$arr = $obj->get( 3 );
+```
 
 ## Use the blog collection in your functions (and filters) ##
 
 If you want to use the collection of blogs - which created the plugin - in your functions (and filters) you could write code like this:
 
-    function my_print_something() {
-        foreach ( MslsBlogCollection::instance()->get() as $blog ) {
-            printf(
-                '<link rel="alternate" hreflang="%1$s" href="http://%1$s.example.com/" />',
-                $blog->get_language()
-            );
-        }
+```php
+function my_print_something() {
+    foreach ( MslsBlogCollection::instance()->get() as $blog ) {
+        printf(
+            '<link rel="alternate" hreflang="%1$s" href="http://%1$s.example.com/" />',
+            $blog->get_language()
+        );
     }
-    add_action( 'wp_head', 'my_print_something' );
+}
+add_action( 'wp_head', 'my_print_something' );
+```
 
 The above example prints the link references to your blogs in all html headers of the output. This is just a simplified version of what the plugin already does.
