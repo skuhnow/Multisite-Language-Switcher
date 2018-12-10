@@ -13,11 +13,13 @@ Most people are likely to use the widget provided by the **Multisite Language Sw
 
 ## Get the current language ##
 
-You can use the constant _WPLANG_ provided by WordPress if you want to know the language of the current blog. It seems that this constant is empty when the current blog runs in English.
+You should use the WordPress function `get_locale()` if you need to know the language of the current blog.
 
-The Multisite Language Switcher sets the language to 'us' in this case. If you want to use this functionality you can write something like that:
+The Multisite Language Switcher offers a similar functionality when it comes to switching between websites. Just write something like:
 
 ```php
+use lloc\Msls\MslsBlogCollection;
+
 $blog     = MslsBlogCollection::instance()->get_current_blog();
 $language = $blog->get_language();
 ```
@@ -29,6 +31,8 @@ The class _MslsOutput_ comes in handy when you'd like to manipulate the items of
 Here comes a simplified version of the add-on [MslsMenu](https://github.com/lloc/MslsMenu):
 
 ```php
+use lloc\Msls\MslsOutput;
+
 function my_custom_menu_item( $items, $args ) {
     if ( function_exists ( 'the_msls' ) && 'primary' == $args->theme_location ) {
         $obj = new MslsOutput;
@@ -45,6 +49,11 @@ add_filter( 'wp_nav_menu_items', 'my_custom_menu_item', 10, 2 );
 You could pass - of course - other values different from _2_. Here is a list with all possibilities:
 
 ```php
+use lloc\Msls\MslsLink;
+use lloc\Msls\MslsLinkTextOnly;
+use lloc\Msls\MslsLinkImageOnly;
+use lloc\Msls\MslsLinkTextImage;
+
 /* MslsLink - Image + text */
 $arr = $obj->get( 0 );
  
@@ -63,6 +72,8 @@ $arr = $obj->get( 3 );
 If you want to use the collection of blogs - which created the plugin - in your functions (and filters) you could write code like this:
 
 ```php
+use lloc\Msls\MslsBlogCollection;
+
 function my_print_something() {
     foreach ( MslsBlogCollection::instance()->get() as $blog ) {
         printf(
